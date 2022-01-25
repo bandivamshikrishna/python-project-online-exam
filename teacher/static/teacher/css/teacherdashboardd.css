@@ -1,0 +1,22 @@
+      
+.container{margin-left:20%;}
+form{margin-left:20px;
+margin-top:200px;}
+.button0{background-color:rgba(0, 0, 0, 0.87);
+color:white;
+width:250px;
+height:100px;
+padding:10px;
+border-radius: 4px;}
+.button1{background-color:rgba(255, 0, 0, 0.932);
+color:white;
+width:250px;
+height:100px;
+padding:10px;
+border-radius: 4px;}
+.button2{background-color:rgb(13, 148, 72);
+color:white;
+width:250px;
+height:100px;
+padding:10px;
+border-radius: 4px;}

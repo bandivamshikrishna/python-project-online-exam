@@ -1,0 +1,33 @@
+
+.container{margin-left:20%;
+height:100%}
+.Registeredstudents{background-color: dodgerblue;
+                    color:white;
+                    width:250px;
+                    height:100px;
+                    border:2px solid black;
+                    font-size: 25px;
+                    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                    }
+.totalTeachers{background-color: blueviolet;
+              color:black;
+              width:250px;
+              height:100px;
+              border:2px solid black;
+              font-size: 25px;
+              font-family: cursive;
+              }
+ .Totalcourses{background-color: coral;
+ color:green;
+ width:250px;
+ height:100px;
+ border:2px solid black;
+ font-size: 25px;
+ font-family: cursive;} 
+ .totalquestions{background-color: cadetblue;
+ color:black;
+ width:250px;
+ height:100px;
+ border:2px solid black;
+ font-size: 25px;
+ font-family: cursive;}                              

@@ -1,0 +1,18 @@
+
+            
+       
+.container{
+  margin-left : 20%;
+margin-top : 100px;
+}
+.btn,.btn1 {
+    background-color: green;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+.btn1{
+    background-color: red;
+
+}
+

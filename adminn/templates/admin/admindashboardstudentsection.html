@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport"content="width=device-width,intial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="{% static 'admin/css/admindashboardstudentsection.css' %}">
+</head>
+<body>
+    {% include 'admin/adminnavbar.html' %}
+<div class="container">
+    <form style="margin-top: 200px;margin-left: 100px;padding: 10px;">
+      <a href="{% url 'admindashboardstudentregistered' %}"><button type="button" class="Registered">Total Registered students<br><i class="fa fa-graduation-cap" aria-hidden="true"></i>{{registered_students}}</button></a>
+       <a href="{% url 'admindashboardstudentviewmarks' %}"><button type="button"class="marks">Students Marks<br><i class="fa fa-eye" aria-hidden="true"></i></button></a>
+        </form>
+</div>
+</body>
+</html>

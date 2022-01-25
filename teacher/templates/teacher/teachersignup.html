@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+{% load static %}
+{% load widget_tweaks %}
+<html>
+<head>
+  <link rel="stylesheet" href="{% static 'teacher/css/teachersignup.css' %}">
+</head>
+<body>
+<h2>Teacher Sign Up Form!</h2>
+  
+<div class="container">
+  <form action="" method='post' novalidate enctype="multipart/form-data">
+    {% csrf_token %}
+<div class="row">
+  <div class="col-25">
+    {{userform.first_name.errors}}
+    <label for="fname">First Name:</label>
+    {% render_field userform.first_name  class="" autocomplete="off" placeholder="Your First Name" %}
+  </div>
+  <div class="col-75">
+      <label>Last name:</label>
+      {{userform.last_name.errors}}
+      {% render_field userform.last_name class="" autocomplete="off" placeholder="Your Last Name"%}
+  </div>
+</div>
+<div class="row">
+  <div class="col-25">
+    <label>Contact:</label>
+    {{teacherform.contact.errors}}
+    {% render_field teacherform.contact class="" autocomplete="off" placeholder="Contact Number"%}
+  </div>
+  <div class="col-75">
+      <label>Address:</label> 
+      {{teacherform.address.errors}}
+      {% render_field teacherform.address class="" autocomplete="off" placeholder="Address"%}
+  </div>
+</div>
+<div class="row">
+  <div class="col-25">
+    <label>Email:</label>
+    {{userform.email.errors}}
+    {% render_field userform.email class="" autocomplete="off" placeholder="Exmaple@gmail.com" %}
+  </div>
+  <div class="col-75">
+    <label>Username:</label>
+    {{userform.username.errors}}
+    {% render_field userform.username class="" autocomplete="off" placeholder="Username" %}
+  </div>
+</div>
+<div class="row">
+    <div class="col-25">
+        <label>Password:</label>
+        {{userform.password1.errors}}
+        {% render_field userform.password1 class="" autocomplete="off" placeholder="Password" %}
+    </div>
+    <div class="col-75">
+      <label>Re-Enter Password:</label>
+      {{userform.password2.errors}}
+      {% render_field userform.password2  class="" autocomplete="off" placeholder="Confirm Password" %}
+    </div>
+    <div class="row">
+      <div class="col-25">
+        {{teacherform.profile_pic.errors}}
+        <label>Profile Picture:</label>
+        {% render_field teacherform.profile_pic %}
+      </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-25">
+    <br></br>
+        <input type="submit" class="button"value="SignUp">
+    </div>
+</div>
+</form>
+{% if messages %}
+  {% for message in messages %}
+    {{message}}
+  {% endfor %}
+{% endif %}
+</div>
+</body>
+</html>

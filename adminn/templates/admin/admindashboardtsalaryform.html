@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+{% load static %}
+{% load widget_tweaks %}
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport"content="width=device-width,intial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="{% static 'admin/css/admindashboardtsalaryform.css' %}">
+    </head>
+  
+    <body>
+        {% include 'admin/adminnavbar.html' %}
+        <h1>Please Enter Salary Amount:</h1>
+        <form style="text-align: center;" action="" method="POST">
+            {% csrf_token %}
+        <label style="font-size: 20px;font-family: cursive;">Salary(Per Month):</label><br>
+        {% render_field teachersalaryform %}
+        <input type="submit" class="approve" value="Approve">
+        
+        </form>
+        <div class="footer">
+            <p>CopyRight<i class="fa fa-globe" aria-hidden="true"></i>Online Examination System-2022
+            </p>
+          </div>
+          
+    </body>
+</html>

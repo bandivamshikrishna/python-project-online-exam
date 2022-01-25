@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport"content="width=device-width,intial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="">
+        <style>
+            /* 
+            body{margin:0px;}
+        ul{list-style-type: none;
+        margin:0px;
+    padding:0px;
+background-color: black;}
+li{color:white;
+display:inline-block;
+padding:20px;}
+.button{background: red;
+    color:black;
+padding:15px;
+width:80px;
+border-radius:4px;}
+ul1 {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 20%;
+  background-color:black;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+li1 a {
+  display: block;
+  color: white;
+  padding: 50px 80px;
+  text-decoration: none;
+}
+li1 a:hover{background-color:white;
+color:black}
+.container{margin-left:20%;} */
+
+
+
+
+
+
+
+
+
+
+body{margin:0px;}
+ul{list-style-type: none;
+margin:0px;
+padding:0px;
+background-color: black;}
+li{color:white;
+display:inline-block;
+padding:20px;}
+.button6{background: red;
+color:black;
+padding:15px;
+width:80px;
+border-radius:4px;}
+ul1 {
+list-style-type: none;
+margin: 0;
+padding: 0;
+width: 20%;
+background-color:black;
+position: fixed;
+top:81px;
+height: 100%;
+overflow: auto;
+}
+.v{
+color: white;
+}
+li1 a {
+display: block;
+color: white;
+padding: 30px 50px;
+text-decoration: none;
+}
+li1 a:hover{background-color:lightseagreen;
+color:black}
+.image{
+margin : 50px;
+width : 150px;
+height : 100px;
+border-radius: 100px;
+margin-bottom : 10px;
+color:cornsilk;
+border:2px solid white;
+
+}
+ul1 h3{
+  color:white;
+  margin-left: 70px;
+  bottom:20px;
+
+}
+
+.rajendar{margin-left:30%;}
+ 
+        </style>
+        </head>
+        <body>
+            <ul>
+            <li style="font-size:35px;font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">online examination<i class="fa fa-bars" aria-hidden="true"></i></li>
+            <li style="float:right"><a href="{% url 'adminlogout' %}"><input type="button" class="button6" value="logout"></a>
+        </ul>
+        
+            <ul1>
+              <li1><img src="" alt="Nothing" height="80px" width="80px" img class="image"><br><h3>(admin)<br>
+                
+            </h3></li1>
+             <li1><a  href="{% url 'admindashboard' %}"><i class="fa fa-desktop" aria-hidden="true"></i>
+                Dashboard</a></li1>
+             <li1><a href="{% url 'admindashboardteachersection' %}"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+             </i>Teacher Section</a></li1>
+             <li1><a href="{% url 'admindashboardstudentsection' %}"><i class="fa fa-question" aria-hidden="true"></i>
+                Student Section </a></li1>
+             <li1><a href="{% url 'admindashboardcourse' %}"><i class="fa fa-user-circle" aria-hidden="true"></i>Manage Courses </a></li1>
+            <li1><a href="{% url 'admindashboardquestion' %}"><i class="fa fa-user-o" aria-hidden="true"></i>Manage Questions </a></li1>
+            </ul1> 
+            <div class="rajendar">
+                
+               
+            </div>
+        
+        </body>
+    
+</html>

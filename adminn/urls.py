@@ -1,0 +1,30 @@
+from django.urls import path
+from . import views
+
+urlpatterns = [
+    path('adminlogin/',views.admin_login,name='adminlogin'),
+    path('admindashboard/',views.admin_dashboard,name='admindashboard'),
+    path('adminlogout/',views.admin_logout,name='adminlogout'),
+    path('admindashboardteachersection/',views.admin_dashboard_teacher_section,name='admindashboardteachersection'),
+    path('admindashboardstudentsection/',views.admin_dashboard_student_section,name='admindashboardstudentsection'),
+    path('admindashboardcourse/',views.admin_dashboard_course,name='admindashboardcourse'),
+    path('admindashboardcourseaddcourse/',views.admin_dashboard_course_add_course,name='admindashboardcourseaddcourse'),
+    path('admindashboardcourseviewcourse/',views.admin_dashboard_course_view_course,name='admindashboardcourseviewcourse'),
+    path('admindashboarddeletecourse/<int:pk>/',views.admin_dashboard_delete_course,name='admindashboarddeletecourse'),
+    path('admindashboardquestion/',views.admin_dashboard_question,name='admindashboardquestion'),
+    path('admindashboardquestionaddquestion/',views.admin_dashboard_question_add_question,name='admindashboardquestionaddquestion'),
+    path('admindashboardquestionviewquestion/',views.admin_dashboard_question_view_question,name='admindashboardquestionviewquestion'),
+    path('admindashboardsubjectquestions/<int:pk>/',views.admin_dashboard_subject_questions,name='admindashboardsubjectquestions'),
+    path('admindashboarddeletesubjectquestion/<int:pk>/',views.admin_dashboard_delete_subject_question,name='admindashboarddeletesubjectquestion'),
+    path('admindashboardteachersalary/',views.admin_dashboard_teacher_salary,name='admindashboardteachersalary'),
+    path('admindashboardstudentregistered/',views.admin_dashboard_student_registered,name='admindashboardstudentregistered'),
+    path('admindashboardstudentviewmarks/',views.admin_dashboard_student_view_marks,name='admindashboardstudentviewmarks'),
+    path('admindashboardstudentcoursemarks/<int:pk>/',views.admin_dashboard_student_course_marks,name='admindashboardstudentcoursemarks'),
+    path('admindashboardstudentcourseviewmarks/<int:stuid>/<int:corid>/',views.admin_dashboard_student_course_view_marks,name='admindashboardstudentcourseviewmarks'),
+    path('admindashboardteachersapproved/',views.admin_dashboard_teachers_approved,name='admindashboardteachersapproved'),
+    path('admindashboardteacherspending/',views.admin_dashboard_teachers_pending,name='admindashboardteacherspending'),
+    path('admindashboardtsalaryform/<int:pk>/',views.admin_dashboard_approve_teacher,name='admindashboardtsalaryform'),
+    path('admindashboardrejectteacher/<int:pk>/',views.admin_dashboard_reject_teacher,name='admindashboardrejectteacher'),
+    path('admindashboarddeleteapprovedteacher/<int:pk>/',views.admin_dashboard_delete_approved_teacher,name='admindashboarddeleteapprovedteacher'),
+    path('admindashboarddeletestudent/<int:pk>/',views.admin_dashboard_delete_registered_students,name='admindashboarddeleteregisteredstudent'),
+]

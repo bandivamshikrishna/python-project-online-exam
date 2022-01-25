@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport"content="width=device-width,intial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="{% static 'admin/css/admindashboardstudentviewmarks.css' %}">
+</head>
+<body>
+    {% include 'admin/adminnavbar.html' %}
+    <div class="container">
+        <h1>Avaliable Students </h1>
+        <table>
+  <tr>
+    <th>Student</th>
+    <th>View Marks</th>
+  </tr>
+  {% for student  in registered_students %}
+  
+    <tr>
+      <tr align="center" >
+        <td>{{student.user}}</td>
+        <td><a href="{% url 'admindashboardstudentcoursemarks' student.id %}"><button type="button" class="button0"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>View Marks</button></a></td>
+    </tr>
+  {% endfor %}
+</table>
+    </div>
+    </body>
+</html

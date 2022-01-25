@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport"content="width=device-width,intial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="{% static 'admin/css/admindashboardteacherspending.css' %}">
+</head>
+<body>
+    {% include 'admin/adminnavbar.html' %}
+    <div class="container">
+        <table border ="1" cellpadding="0"  cellspacing="0" align="center" width="1000" height="100">
+      <tr>
+      
+       <th colspan="5" align="center" bgcolor="deepskyblue" color="white" > pending Teacher</th> 
+      
+      </tr>
+      <tr align="center">
+      
+       <th>name</th> <th> photo</th>  <th> contact</th> <th> Address</th><th> Actions</th> 
+      
+      </tr>
+      {% for teacher in pending_teachers %}
+      <tr align="center" >
+        <td >{{teacher.user}}</td>
+        <td> <img src="{{teacher.profile_pic.url}}" height="50px" width="50px"></td> 
+        <td> {{teacher.contact}}</td> 
+        <td> {{teacher.address}}</td>
+        <td>  <a href="{% url 'admindashboardrejectteacher' teacher.id %}"><button class="btn"><i class="fa fa-close"> </i></button></a> 
+              <a href="{% url 'admindashboardtsalaryform' teacher.id %}"><button class="btn1"><i class="fa fa-check"></i> </button></a> 
+        </td>
+            
+      </tr>
+      {% endfor %}
+          </div>
+    </body>
+</html

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport"content="width=device-width,intial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="{% static 'teacher/css/teacherwaitforapproval.css' %}">
+    </head>
+  
+    <body>
+        <div>
+        <h1>Hello {{request.user|capfirst}}</h1>
+        <h2>your account has not been ACTIVATED yet!</h2>
+        <h3>Waiting for approval from the administrator</h3>
+        <h4>and soon younwill be able to access your Account after Approval!</h4>
+        <a href="{% url 'teacherlogout' %}"><button type="button" class="btn">logout</button></a>
+        </div>
+        <div class="footer">
+            <p>CopyRight<i class="fa fa-globe" aria-hidden="true"></i>Online Examination System-2022
+            </p>
+          </div>
+          
+    </body>
+</html>

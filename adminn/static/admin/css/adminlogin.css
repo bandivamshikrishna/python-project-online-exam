@@ -1,0 +1,28 @@
+
+            body{margin:20px;}
+            .container{margin-left: 500px;
+                       margin-right: 500px;
+                       margin-top:150px;
+                       background-color: rgb(12, 8, 8);
+                       height:300px;
+                       width:400px;
+                       border-radius:6px;
+                       box-shadow: 2px 3px 4px 5px rgba(0,0,0,0.4);}
+        input[type=text]{width:250px;
+                          height:30px;
+                          padding:5px;
+                          border:1px solid;
+                          border-radius:1px;
+                        }
+        input[type="password"]{width:250px;
+                              height:30px;
+                              padding:5px;
+                              border:1px solid;
+                              border-radius:1px;
+                              } 
+        input[type="button"]{width:150px;
+                            height:50px;
+                            background-color: rgb(61, 202, 61); 
+                            color:white;               
+                            box-sizing:border-box
+                            } 

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport"content="width=device-width,intial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="{% static 'admin/css/admindashboardquestionviewquestion.css' %}">
+</head>
+<body>
+    {% include 'admin/adminnavbar.html' %}
+    <div class="container">
+        <h1>Avaliable Questions</h1>
+        <table>
+  <tr>
+    <th>Course</th>
+    <th>Total Question</th>
+    <th>Total Marks</th>
+    <th>Action</th>
+  </tr>
+  {% for course in registered_courses %}
+  <tr align="center" >
+    <td>{{course.course_name}}</td>
+    <td>{{course.no_of_questions}}</td>
+    <td>{{course.total_marks}}</td>
+    <td><a href="{% url 'admindashboardsubjectquestions' course.id %}"><button type="button"class="btn"><i class="fa fa-eye" aria-hidden="true"></i>View Question</button></a></td>
+  </tr>
+  {% endfor %}
+    
+  {% comment %} <tr>
+    <td>Software Enginerring</td>
+    <td>10</td>
+    <td>50</td>
+    <td><a href="#"><button type="button"class="btn"><i class="fa fa-eye" aria-hidden="true"></i>View Question</button></a></td>
+  </tr>
+  <tr>
+      <td>C# programming</td>
+      <td>10</td>
+      <td>50</td>
+      <td><a href="#"><button type="button"class="btn"><i class="fa fa-eye" aria-hidden="true"></i>View Question</button></a></td>
+  </tr>
+  <tr>
+      <td>Application And Development</td>
+      <td>10</td>
+      <td>50</td>
+      <td><a href="#"><button type="button"class="btn"><i class="fa fa-eye" aria-hidden="true"></i>View Question</button></a></td>
+      </tr>
+  </tr> {% endcomment %}
+</table>
+    
+    </div>
+    </body>
+</html>

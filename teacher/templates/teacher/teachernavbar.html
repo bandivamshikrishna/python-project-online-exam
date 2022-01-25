@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport"content="width=device-width,intial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="{% static 'teacher/css/teachernavbarr.css' %}">
+        </head>
+        <body>
+            <ul>
+            <li style="font-size:35px;font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">online examination<i class="fa fa-bars" aria-hidden="true"></i></li>
+            <li style="float:right"><a href="{% url 'teacherlogout' %}"><input type="button" class="button6" value="logout"></a>
+        </ul>
+        
+        <ul1>
+          <li1><img src="{{teacher.profile_pic.url}}" alt="Nothing" height="80px" width="80px" img class="image"></li1><br> <h3>{{teacher.user|capfirst}}<br>
+          &ensp;(Teacher)
+        </h3></li1>
+         <li1><a  href="{% url 'teacherdashboard' %}"><i class="fa fa-desktop" aria-hidden="true"></i>
+            Dashboard</a></li1>
+         <li1><a href="{% url 'teacherdashboardcourse' %}"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+         </i>Manage Courses</a></li1>
+         <li1><a href="{% url 'teacherdashboardquestion' %}"><i class="fa fa-question" aria-hidden="true"></i>
+            Manage Questions</a></li1>
+        <li1><a href="{% url 'updateteacher'  request.user.teacher.id %}"><i class="fa fa-wrench" aria-hidden="true"></i>Update</a></li1>
+        </ul1> 
+            <div class="rajendar">
+                
+               
+            </div>
+        
+        </body>
+    
+</html>

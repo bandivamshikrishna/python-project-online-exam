@@ -1,0 +1,28 @@
+
+.container{margin-left:20%;
+height:100%}
+.Approved{background-color:darkmagenta;
+              color:black;
+              width:350px;
+              height:100px;
+              border:2px solid black;
+              font-size: 25px;
+              font-family: cursive;
+              border-radius:10px;
+              }
+ .pending{background-color:gainsboro;
+ color:green;
+ width:350px;
+ height:100px;
+ border:2px solid black;
+ font-size: 25px;
+ font-family: cursive;
+border-radius: 10px;} 
+ .salray{background-color:darkslategray;
+ color:black;
+ width:350px;
+ height:100px;
+ border:2px solid black;
+ font-size: 25px;
+ font-family: cursive;
+ border-radius: 10px;}                              

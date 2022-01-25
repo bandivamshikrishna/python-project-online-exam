@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+{% load static %}
+{% load widget_tweaks %}
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport"content="width=device-width,intial-scale=1.0">
+        <link rel="stylesheet" href="">
+        <style>
+            
+/* .container{margin-left:20%;}
+.rajendar{margin-top:50px;
+    margin-left:50px;
+    background-color:white;
+width:800px;
+height:900px;
+box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.2);
+border-radius:4px;
+} */
+h2{text-align:center}
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type=number], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type=email], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type=password]{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.button{
+  background-color: #45a049;
+  color:white;
+  width:100%;
+  height:50px;
+  border-radius:4px;
+  border:2px solid black;
+}
+
+        </style> 
+    </head>
+<body>
+    {% include 'teacher/teachernavbar.html' with teacher=request.user.teacher %}
+    <div class="container">
+    <div class="rajendar">
+        <h2>Update Teacher</h2>
+        <form action="" method="post" novalidate enctype="multipart/form-data">
+            {{userform.non_field_errors}}
+            <label>first name:</label><br>
+            {{userform.first_name.errors}}
+            {% render_field userform.first_name %}
+            <label>last name:</label><br>
+            {{userform.last_name.errors}}
+            {% render_field userform.last_name %}<br>
+            <label>contact:</label><br>
+            {{teacherform.contact.errors}}
+            {% render_field teacherform.contact %}<br>
+            <label>Address:</label><br>
+            {{teacherform.address.errors}}
+            {% render_field teacherform.address %}<br>
+            <label>Email:</label><br>
+            {{userform.email.errors}}
+            {% render_field userform.email %}<br>
+            <label>Username:</label>
+            {{userform.username.errors}}
+            {% render_field  userform.username %}<br>
+            <label>Password:</label>
+            {{userform.password1.errors}}
+            {% render_field userform.password1 %}<br>
+            <label>Re-enterPassword:</label><br>
+            {{userform.password2.errors}}
+            {% render_field userform.password2 %}<br>
+            <label>Profile Picture :</label>
+            {% render_field teacherform.profile_pic %}<br><br>
+            <input type="submit" class="button" value="update">
+    </div>
+</form>
+    </div>
+    </body>
+</html>

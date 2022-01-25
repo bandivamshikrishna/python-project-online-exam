@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport"content="width=device-width,intial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="{% static 'admin/css/admindashboardcourseviewcourse.css' %}">
+</head>
+<body>
+    {% include 'admin/adminnavbar.html' %}
+    <div class="container">
+        <h1>Avaliable Courses</h1>
+        <table>
+  <tr>
+    <th>Course</th>
+    <th>Total Question</th>
+    <th>Total Marks</th>
+    <th>Action</th>
+  </tr>
+  {% for course  in registered_courses %}
+  
+    <tr>
+      <tr align="center" >
+        <td>{{course.course_name}}</td>
+        <td>{{course.no_of_questions}}</td>
+        <td>{{course.total_marks}}</td>
+        <td><a href="{% url 'admindashboarddeletecourse' course.id %}"><button type="button"><i class="fa fa-trash-o" aria-hidden="true"></i></button></a></td>
+    </tr>
+  {% endfor %}
+</table>
+  {% if messages %}
+      {% for message in messages %}
+          {{message}}
+      {% endfor %}
+  {% endif %}
+    </div>
+    </body>
+</html

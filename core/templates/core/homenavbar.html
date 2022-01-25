@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport"content="width=device-width,intial-scale=1.o">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="{% static 'core/css/homnavbar.css' %}">
+    </head>
+    <body>
+        <ul>
+            
+            <li><a href="{% url 'studentsignhome'  %}"><i class="fa fa-home" aria-hidden="true"></i>
+                Home</a></li>
+            <li><a href="{% url 'teacherhome' %}"><i class="fa fa-user-circle" aria-hidden="true"></i>
+                Teacher</a></li>
+            <li><a href="{% url 'studenthome' %}"><i class="fa fa-user-o" aria-hidden="true"></i>
+                Student</a></li>
+            <li><a href="{% url 'adminlogin' %}"><i class="fa fa-lock" aria-hidden="true"></i>Admin</a></li>
+            <li><a href="#contact"><i class="fa fa-phone-square" aria-hidden="true"></i>Contact</a></li>
+        </ul>
+        
+    </body>
+</html>

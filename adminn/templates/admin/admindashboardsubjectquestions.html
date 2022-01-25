@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport"content="width=device-width,intial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="{% static 'admin/css/admindashboardsubjectquestions.css' %}">
+</head>
+<body>
+    {% include 'admin/adminnavbar.html' %}
+    <div class="container">
+        <h1>Avaliable Questions</h1>
+        <table>
+  <tr>
+    <th>S.No</th>
+    <th>Question</th>
+    <th> Marks</th>
+    <th>Action</th>
+  </tr>
+  {% for question in registered_questions %}
+  <tr>
+    <tr align="center" >
+    <td>{{forloop.counter}}</td>
+    <td>{{question.question}}</td>
+    <td>{{question.marks}}</td>
+    <td><a href="{% url 'admindashboarddeletesubjectquestion' question.id %}"><button type="button"class="btn"><i class="fa fa-trash" aria-hidden="true"></i></button></a></td>
+   </tr>
+
+     {% endfor %}
+  
+    
+
+</table>
+    
+    </div>
+    </body>
+</html>

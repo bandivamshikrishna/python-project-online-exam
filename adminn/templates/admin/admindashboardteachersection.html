@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport"content="width=device-width,intial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="{% static 'admin/css/admindashboardteachersection.css' %}">
+</head>
+<body>
+    {% include 'admin/adminnavbar.html' %}
+<div class="container">
+    <form style="margin-top: 200px;margin-left: 100px;padding: 10px;">
+      <a href="{% url 'admindashboardteachersapproved' %}"><button type="button" class="Approved">Total Approved Teacher<br><i class="fa fa-users" aria-hidden="true"></i>
+        {{approved_teachers}}</button></a>
+       <a href="{% url 'admindashboardteacherspending' %}"><button type="button"class="pending">Total pending Teachers<br><i class="fa fa-refresh" aria-hidden="true"></i>{{pending_teachers}}</button></a>
+       <a href="{% url 'admindashboardteachersalary' %}"><button type="button"class="salray">Total Teacher salray<br><i class="fa fa-usd" aria-hidden="true"></i>{{teachers_salary}}</button></a>
+       </form>
+</div>
+</body>
+</html>

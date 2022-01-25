@@ -1,0 +1,12 @@
+
+.container{margin-left:20%;}
+        h1{background-color: lightskyblue;
+           color:black;
+           text-align:center;
+        }
+table{
+    margin-left:200px;
+        margin-right:200px;
+        border-collapse:collapse;
+       width:55%;}
+table,td,th{border:2px solid lightskyblue;;}

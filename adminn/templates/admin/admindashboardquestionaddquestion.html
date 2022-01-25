@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+{% load static %}
+{% load widget_tweaks %}
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport"content="width=device-width,intial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="{% static 'admin/css/admindashboardquestionaddquestion.css' %}">
+</head>
+<body>
+    {% include 'admin/adminnavbar.html' %}
+    <div class="container">
+        <div class="row">
+        <form action="" method="post">
+            {% csrf_token %}
+            <h2 style="text-align:center">Add questions:</h2>
+            <label for="courses">Course:</label>
+            {% render_field questionform.courseid %}
+            <label for="question">Question:</label>
+            {% render_field questionform.question  class="" placeholder="what is your Name?"%}
+            <label for="Marks">Marks:</label>
+            {% render_field questionform.marks  class="" placeholder="Eg:5"%}
+            <label for="Option 1">Option 1:</label>
+            {% render_field questionform.option1  class="" placeholder=""%}
+            <label for="Option 2">Option 2:</label>
+            {% render_field questionform.option2  class="" placeholder=""%}
+            <label for="Option 3">Option 3:</label>
+            {% render_field questionform.option3  class="" placeholder=""%}
+            <label for="Option 4">Option 4:</label>
+            {% render_field questionform.option4  class="" placeholder=""%}
+            <label for="correct answer">Correct Answer:</label>
+            {% render_field questionform.answer  class="" placeholder=""%}
+            <input type="submit" value="Submit">
+            
+    </form>
+    {% if messages %}
+            {% for message in messages %}
+                    {{message}}
+            {% endfor %}
+    {% endif %}
+        </div>
+
+    </div>
+</body>
+</html>

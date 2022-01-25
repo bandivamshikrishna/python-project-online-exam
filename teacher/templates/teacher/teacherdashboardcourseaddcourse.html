@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{% load static %}
+{% load widget_tweaks %}
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport"content="width=device-width,intial-scale=1.0">
+        <link rel="stylesheet" href="{% static 'teacher/css/teacherdashboardcourseaddcourse.css' %}">
+</head>
+<body>
+    {% include 'teacher/teachernavbar.html'  with teacher=request.user.teacher %}
+    <div class="container">
+        <form action="" method="post" novalidate>
+            {% csrf_token %}
+            <div class="rajendar">
+                <h2>Add Course </h2>
+                <label>Course Name:</label><br><br>
+                {% render_field courseform.course_name class="" autocomplete="off" placeholder="Course Name" %}<br>
+                <label>total Questions:</label><br><br>
+                {% render_field courseform.no_of_questions class="" autocomplete="off" placeholder="Number of Questions 10" %}<br>
+                <label>Total Marks:</label><br><br>
+                {% render_field courseform.total_marks class="" autocomplete="off" placeholder="total marks 100" %}<br>
+                <input type="submit" class="button0" value="submit info"><br><br>
+                {% if messages %}
+                        {% for message in messages %}
+                                {{message}}
+                        {% endfor %}
+                {% endif %}
+            </div>
+            </div>
+        </form>
+    </body>
+</html>

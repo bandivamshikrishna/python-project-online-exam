@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport"content="width=device-width,intial-scale=1.0">
+        <link rel="stylesheet" href="{% static 'core/css/basehome.css' %}">
+    </head>
+    <body>
+        
+        <div class="rajendar">
+          {% block hello %}{% endblock hello %}
+            <h3 style="font-size:20px;">And Welcome to Online Examination System</h3>
+        </div>
+        <h4>select any of them to access into the system:</h4>
+        <form style="text-align: center;">
+        {% block logincreate %}{% endblock logincreate %}
+      
+    </form>
+    </body>
+</html>

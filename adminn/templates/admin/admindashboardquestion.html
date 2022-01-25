@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport"content="width=device-width,intial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="{% static 'admin/css/admindashboardquestion.css' %}">
+</head>
+<body>
+    {% include 'admin/adminnavbar.html' %}
+<div class="container">
+    <form>
+    <a href="{% url 'admindashboardquestionaddquestion' %}"><button type="button"class="butn-1">Add Question<br><i class="fa fa-plus-circle" aria-hidden="true"></i></button></a>
+    <a href="{% url 'admindashboardquestionviewquestion' %}"><button type="button"class="viewcourses">view Question<br><i class="fa fa-eye" aria-hidden="true"></i></button></a>
+    </form>
+</div>
+</body>
+</html>

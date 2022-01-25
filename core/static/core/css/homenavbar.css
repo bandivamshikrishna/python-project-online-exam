@@ -1,0 +1,32 @@
+
+            body{margin:0px;}
+            ul{margin:0px;
+            padding:0px;
+        list-style-type: none;
+    background-color: black;
+    overflow:hidden;}
+        li{float:right;
+        }
+        li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+li a:hover{background-color:lightseagreen;}
+        div{margin-top:100px;}    
+         h1{color:blue;
+        text-align: center;}
+         h2{color:black;
+        text-align: center;}
+        h3{text-align:center}
+        h4{text-align:center}
+        .button{margin-left:690px;
+        background-color:lightblue;
+    height:50px;
+width:180px;
+padding:10px;
+border-radius: 4px;}
+
+   

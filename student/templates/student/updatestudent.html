@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+{% load static %}
+{% load widget_tweaks %}
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport"content="width=device-width,intial-scale=1.0">
+        <link rel="stylesheet" href="{% static 'student/css/updatestudent.css' %}"> 
+    </head>
+<body>
+    {% include 'student/studentnavbar.html' with student=request.user.student %}
+    <div class="container">
+    <div class="rajendar">
+        <h2>Update Student</h2>
+        <form action="" method="post" novalidate enctype="multipart/form-data">
+            {{userform.non_field_errors}}
+            <label>first name:</label><br>
+            {{userform.first_name.errors}}
+            {% render_field userform.first_name %}
+            <label>last name:</label><br>
+            {{userform.last_name.errors}}
+            {% render_field userform.last_name %}<br>
+            <label>contact:</label><br>
+            {{studentform.contact.errors}}
+            {% render_field studentform.contact %}<br>
+            <label>Address:</label><br>
+            {{studentform.address.errors}}
+            {% render_field studentform.address %}<br>
+            <label>Email:</label><br>
+            {{userform.email.errors}}
+            {% render_field userform.email %}<br>
+            <label>Username:</label>
+            {{userform.username.errors}}
+            {% render_field  userform.username %}<br>
+            <label>Password:</label>
+            {{userform.password1.errors}}
+            {% render_field userform.password1 %}<br>
+            <label>Re-enterPassword:</label><br>
+            {{userform.password2.errors}}
+            {% render_field userform.password2 %}<br>
+            <label>Profile Picture :</label>
+            {% render_field studentform.profile_pic %}<br><br>
+            <input type="submit" class="button" value="update">
+    </div>
+</form>
+    </div>
+    </body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport"content="width=device-width,intial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="{% static 'student/css/studentdashboad.css' %}">
+        </head>
+        <body>
+            {% include 'student/studentnavbar.html' %}
+            
+            <div class="rajendar">
+                
+                <button type="button"class="button1"><i class="fa fa-align-justify" aria-hidden="true"></i>Avaliable exams {{registered_courses}}</button>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+                <button type="button"class="button2"><i class="fa fa-question-circle" aria-hidden="true"></i>total questions {{registered_questions}}</button>
+            </div>
+        
+        </body>
+    
+</html>

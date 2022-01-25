@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport"content="width=device-width,intial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="{% static 'teacher/css/teacherdashboardquestion.css' %}">
+</head>
+<body>
+    {% include 'teacher/teachernavbar.html'  with teacher=request.user.teacher %}
+<div class="container">
+    <form>
+    <a href="{% url 'teacherdashboardquestionaddquestion' %}"><button type="button"class="butn-1">Add Question<br><i class="fa fa-plus-circle" aria-hidden="true"></i></button></a>
+    <a href="{% url 'teacherdashboardquestionviewquestion' %}"><button type="button"class="viewcourses">view Question<br><i class="fa fa-eye" aria-hidden="true"></i></button></a>
+    </form>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+ 
+            body{margin:0px;}
+            ul{list-style-type: none;
+            margin:0px;
+        padding:0px;
+    background-color: black;
+    position:sticky;
+    top:0px;
+    }
+    li{color:white;
+    display:inline-block;
+    padding:20px;}
+    .button{background: red;
+        color:black;
+    padding:15px;
+    width:80px;
+    border-radius:4px;}
+    ul1 {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      width: 20%;
+      background-color:black;
+      position: fixed;
+      top:81px;
+      height: 100%;
+      overflow: auto;
+    }
+    
+    li1 a {
+      display: block;
+      color: white;
+      padding: 50px 80px;
+      text-decoration: none;
+    }
+    li1 a:hover{background-color:white;
+    color:black}
+    .rajendar{margin-left:30%;}
+    .button1{background-color: lightskyblue;
+        margin-top:200px;
+    padding:30px;
+    width:300px;
+    border-radius: 6px;}
+    .button2{background-color: pink;
+    color:black;
+    padding:30px;
+    width:300px;
+    border-radius:6px;}
+    

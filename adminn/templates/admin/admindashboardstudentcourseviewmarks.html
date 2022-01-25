@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport"content="width=device-width,intial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="{% static 'admin/css/admindashboardstudentcourseviewmarks.css' %}">
+</head>
+<body>
+    {% include 'admin/adminnavbar.html' %}
+    <div class="container">
+        <h1> {{course|capfirst}}   Marks  of  {{student.user|capfirst}}</h1>
+        <table>
+  <tr>
+    <th>Number of Attempts</th>
+    <th>Date</th>
+    <th>View Marks</th>
+  </tr>
+   {% for result  in results %}
+  
+    <tr>
+      <tr align="center" >
+        <td>{{forloop.counter}}</td>
+        <td>{{result.date}}</td>
+        <td>{{result.marks}}</td>
+        
+    </tr>
+  {% endfor %}
+</table>
+    </div>
+    </body>
+</html
